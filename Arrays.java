@@ -1,3 +1,5 @@
+import java.util.*;
+
 // ====================================================================
 //                          Array creation
 //====================================================================
@@ -19,7 +21,6 @@
 //                  Array input, output, updation, length fn   
 //====================================================================
 
-// import java.util.*;
 
 // public class Arrays{
 //     public static void main(String[] args) {
@@ -51,16 +52,59 @@
 
 
 // ====================================================================
-//                        
+//                Arrays as fn Arguments                
 //====================================================================
+
+
+// public class Arrays{
+//     public static void update(int marks[],int nonChangable){
+//         nonChangable=10;
+//         for(int i=0;i<marks.length;i++){
+//             marks[i]+=1;
+//         }
+//     }
+//     public static void main(String[] args) {
+//         int marks[]={97,98,99};
+//         int nonChangable=5;
+//         update(marks,nonChangable);
+//         System.out.println(nonChangable);
+//         for(int i=0;i<marks.length;i++){
+//             System.out.print(marks[i]+ " ");
+//         }
+   
+//     }
+// }
 
 
 
 
 // ====================================================================
-//                        
+//                    Linear Search                        
 //====================================================================
 
+
+public class Arrays{
+    public static int linearSearch(int numbers[],int key){
+        for(int i=0;i<numbers.length;i++){
+            if(numbers[i]==key){
+                return i;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args) {
+        int numbers[]={1,2,3,4,5,6,7,8,9,10,11,12};
+        int key=20;
+        int index=linearSearch(numbers, key);
+        if(index==-1){
+            System.out.println("not found");
+        }
+        else{
+            System.out.println("key is at index : "+ index);
+        }
+        
+    }
+}
 
 
 
